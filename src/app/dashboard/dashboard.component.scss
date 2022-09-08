@@ -1,0 +1,44 @@
+@import "../../styles.scss";
+
+.container {
+  width: calc(100% - 250px);
+  background-color: #f0f0f0;
+  transition: 0.5s;
+  position: absolute;
+  left: 250px;
+  top: 70px;
+  overflow-x: hidden;
+  .displayData {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    background-color: #f0f0f0;
+    height: auto;
+
+    .content {
+      margin: 20px;
+    }
+    .sideBar {
+      margin: 20px 20px 20px 0;
+    }
+  }
+}
+
+.extended {
+  width: calc(100% - 70px);
+  left: 70px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: calc(100%);
+    left: 00px;
+    top: 70px;
+    z-index: -100;
+    .displayData {
+      grid-template-columns: 100%;
+      .sideBar {
+        margin: 20px 20px 20px 20px;
+      }
+    }
+  }
+}

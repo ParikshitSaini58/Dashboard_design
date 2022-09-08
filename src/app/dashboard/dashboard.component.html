@@ -1,0 +1,19 @@
+<div class="container" [ngClass]="{ extended: clicked }">
+  <app-header></app-header>
+  <div class="displayData">
+    <div class="content">
+      <div class="dataContainer">
+        <app-graph-box></app-graph-box>
+      </div>
+      <div class="dataContainer">
+        <app-overview></app-overview>
+      </div>
+      <div class="dataContainer">
+        <app-recent-orders></app-recent-orders>
+      </div>
+    </div>
+    <div class="sideBar">
+      <aside><app-notifications></app-notifications></aside>
+    </div>
+  </div>
+</div>

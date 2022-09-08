@@ -1,0 +1,39 @@
+<header class="extended" [ngClass]="{ extended: clicked }">
+  <div class="container">
+    <div class="logo">
+      <div class="hamburger">
+        <i class="fa-solid fa-bars" (click)="trigermenu()"></i>
+      </div>
+      <h2>logo</h2>
+    </div>
+    <div class="searchBox">
+      <input type="text" class="search" placeholder="Search here" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="toolPLate">
+      <div class="select">
+        <select name="" id="">
+          <option value="All Market">All Market</option>
+          <option value="Option A">Option A</option>
+          <option value="Option B">Option B</option>
+          <option value="Option C">Option C</option>
+        </select>
+      </div>
+
+      <div class="icon">
+        <i class="fa-solid fa-bell"></i>
+        <span>1</span>
+      </div>
+      <div class="icon">
+        <i class="fa-solid fa-envelope"></i>
+        <span>5</span>
+      </div>
+      <div class="profile">
+        <img src="../../assets/profile.png" alt="" />
+      </div>
+      <div class="icon">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </div>
+    </div>
+  </div>
+</header>

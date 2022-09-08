@@ -1,0 +1,157 @@
+@import "../../../styles.scss";
+.container {
+  padding: 20px;
+  background-color: $light;
+  margin-top: 20px;
+  .topBar {
+    @include flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: $orange;
+      font-weight: 600;
+    }
+  }
+  .tabButtons {
+    border-bottom: 3px solid $lightGrey;
+    margin-top: 20px;
+    button {
+      border: none;
+      padding: 20px 10px;
+      width: 100px;
+      background-color: $light;
+      font-weight: 600;
+      border-bottom: 2px solid $light;
+      &:hover {
+        border-bottom: 2px solid $orange;
+      }
+    }
+  }
+
+  .content {
+    .contentValue {
+      .row {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        border-bottom: 1px solid $lightGrey;
+        padding: 10px 0;
+        .Graph {
+          margin: 10px;
+          .process {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            color: $light;
+            text-align: center;
+            padding: 6px 0;
+          }
+
+          .Complete {
+            background-color: Green;
+          }
+          .Incomplete {
+            background-color: blue;
+          }
+
+          .Cancelled {
+            background-color: red;
+          }
+
+          .Inprocess {
+            background-color: orange;
+          }
+        }
+        .orderDetails {
+          div {
+            color: $darkGrey;
+            span {
+              font-weight: 700;
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    text-align: center;
+    margin: 0 20px;
+    button {
+      border: none;
+      border-radius: 4px;
+      margin: 10px 0 10px 10px;
+      padding: 10px;
+      width: 100px;
+      font-weight: 700;
+
+      cursor: pointer;
+      &:hover {
+        background: $gradient;
+        color: $light;
+      }
+      &:focus {
+        background: $gradient;
+      }
+    }
+    .active {
+      color: $light;
+      background: $gradient;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .topBar {
+    display: flex;
+  }
+  .tabButtons {
+    border-bottom: 3px solid $lightGrey;
+    margin-top: 20px;
+    button {
+      border: none;
+      padding: 20px 10px;
+      width: 80px !important;
+    }
+  }
+
+  .content {
+    .contentValue {
+      .row {
+        grid-template-columns: 100% !important;
+        .Graph {
+          margin: 10px 0;
+          .process {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            color: $light;
+            text-align: center;
+            padding: 6px 0;
+          }
+        }
+        .orderDetails {
+          div {
+            color: $darkGrey;
+            span {
+              font-weight: 700;
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    margin: 0 5px;
+    button {
+      margin: 10px 0 10px 10px !important;
+      padding: 5px !important;
+      width: 50px !important;
+      font-weight: 700 !important;
+    }
+  }
+}

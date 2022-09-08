@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="buttons">
+    <button
+      class="button"
+      id="day"
+      [class.active]="ids === 'day'"
+      (click)="openGraph('day')"
+    >
+      Day
+    </button>
+    <button
+      class="button"
+      id="week"
+      [class.active]="ids === 'week'"
+      (click)="openGraph('week')"
+    >
+      Week
+    </button>
+    <button
+      class="button"
+      id="month"
+      [class.active]="ids === 'month'"
+      (click)="openGraph('month')"
+    >
+      Month
+    </button>
+    <button
+      class="button"
+      id="year"
+      [class.active]="ids === 'year'"
+      (click)="openGraph('year')"
+    >
+      Year
+    </button>
+  </div>
+
+  <div class="content">
+    <div class="contentValue" *ngIf="ids === 'day'">
+      <div class="graph">
+        <img src="../../../assets/graph1.png" alt="" />
+      </div>
+      <div class="graph">
+        <img src="../../../assets/graph2.png" alt="" />
+      </div>
+    </div>
+    <div class="contentValue" *ngIf="ids === 'week'">
+      <div class="graph">
+        <img src="../../../assets/graph2.png" alt="" />
+      </div>
+      <div class="graph">
+        <img src="../../../assets/graph1.png" alt="" />
+      </div>
+    </div>
+    <div class="contentValue" *ngIf="ids === 'month'">
+      <div class="graph">
+        <img src="../../../assets/graph1.png" alt="" />
+      </div>
+      <div class="graph">
+        <img src="../../../assets/graph2.png" alt="" />
+      </div>
+    </div>
+    <div class="contentValue" *ngIf="ids === 'year'">
+      <div class="graph">
+        <img src="../../../assets/graph2.png" alt="" />
+      </div>
+      <div class="graph">
+        <img src="../../../assets/graph1.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

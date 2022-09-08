@@ -1,0 +1,194 @@
+<div class="container">
+  <div class="topBar">
+    <h2>Overview</h2>
+    <div class="buttons">
+      <button
+        class="button"
+        id="day"
+        [class.active]="ids === 'day'"
+        (click)="openGraph('day')"
+      >
+        Day
+      </button>
+      <button
+        class="button"
+        id="week"
+        [class.active]="ids === 'week'"
+        (click)="openGraph('week')"
+      >
+        Week
+      </button>
+      <button
+        class="button"
+        id="month"
+        [class.active]="ids === 'month'"
+        (click)="openGraph('month')"
+      >
+        Month
+      </button>
+      <button
+        class="button"
+        id="year"
+        [class.active]="ids === 'year'"
+        (click)="openGraph('year')"
+      >
+        Year
+      </button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="contentValue" *ngIf="ids === 'day'">
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Market</th>
+            <th>₹ 23521524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Input</th>
+            <th>₹ 2251524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="contentValue" *ngIf="ids === 'week'">
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Input</th>
+            <th>₹ 2251524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Market</th>
+            <th>₹ 23521524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="contentValue" *ngIf="ids === 'month'">
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Market</th>
+            <th>₹ 23521524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Input</th>
+            <th>₹ 2251524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="contentValue" *ngIf="ids === 'year'">
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Input</th>
+            <th>₹ 2251524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="table">
+        <table>
+          <tr>
+            <th>By Market</th>
+            <th>₹ 23521524</th>
+            <th>100%</th>
+          </tr>
+          <tr *ngFor="let data of overviewData">
+            <td>
+              <a href="#">{{ data.market }}</a>
+            </td>
+            <td>₹ {{ data.rupee }}</td>
+            <td>
+              {{ data.quantity }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

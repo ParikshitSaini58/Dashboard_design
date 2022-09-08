@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Notifications</h2>
+  <ul>
+    <li *ngFor="let data of notification">
+      <span class="username">{{ data.username }} </span
+      ><span>{{ data.detail }}</span
+      ><br />
+      <p>{{ data.time }}</p>
+    </li>
+  </ul>
+</div>

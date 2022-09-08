@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+// Global Font
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Global Colors
+$primary: #50b75e;
+$secondary: #3fa14c;
+$light: #ffffff;
+$darkGrey: #636363;
+$lightGrey: #d8d8d8;
+$gradient: linear-gradient(180deg, #ff8316 0%, #fead11 100%);
+$orange: #fead11;
+$dark: #242424;
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+button {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
